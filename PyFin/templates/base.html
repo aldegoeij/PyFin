@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if title %}{{ title }} | {% endif %}PyFin</title>
+</head>
+<body>
+
+<table width="100%" border="1">
+    <tr>
+        <td valign="bottom" width="200px"><img src="" width="200" height="70" alt="logo"></td>
+        <td valign="bottom" width="100%">
+            Home |
+            App 1 |
+            App 2 |
+            App 3 |
+            App 4 |
+            App 5 |
+            <a href="{% url 'PyFin.monitor.views.home' %}">Monitor</a>
+        </td>
+        <td valign="bottom" align="right">Username<br>Logout</td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <a href="{% url 'PyFin.monitor.views.query_database' %}">Query</a>
+        </td>
+    </tr>
+</table>
+<table width=100%>
+    <tr><td><small><a href="{% url 'PyFin.views.home' %}">Home</a> > [ breadcrumbs ]</small></td></tr>
+    <tr><td bgcolor="#ffffe0"><center><b>[ session messages ]</b></center></td></tr>
+</table>
+
+{% if title %}<h1>{{ title }}</h1>{% endif %}
+
+    <table width="100%" border="0">
+    <tr>
+        <td align="top">
+            {% block contents %}
+                <p>{{ test }}</p>
+            {% endblock %}
+        </td>
+    </tr>
+    </table>
+
+<p>&nbsp;</p>
+
+{% block footer %}
+    <!-- FIXME -->
+    <hr>
+    <p><center><small>&copy;Copyright 2011, 2012. All rights reserved.<br>
+    Version Information. Licencing Information. Disclaimer. Administrative Contact.</small></center></p>
+{% endblock %}
+
+<p>&nbsp;</p>
+
+</body>
+</html>

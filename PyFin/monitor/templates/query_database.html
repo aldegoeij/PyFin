@@ -1,0 +1,25 @@
+{%  extends 'base.html' %}
+
+{% block contents %}
+    <p>hahah</p>
+    <table border=1>
+        <tr>
+            <th>Timestamp</th>
+            <th>User</th>
+            <th>Action Type</th>
+            <th>Action</th>
+            <th>Source</th>
+            <th>Result</th>
+        </tr>
+    {% for i in items %}
+        <tr>
+            <td>{{ i.timestamp}}</td>
+            <td>{{ i.user}}</td>
+            <td>{{ i.action_type}}</td>
+            <td>{{ i.action}}</td>
+            <td>{{ i.source}}</td>
+            <td>{{ i.result}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

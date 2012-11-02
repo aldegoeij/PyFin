@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% if title %}{{ title }} | {% endif %}PyFin{% endblock %}</title>
+</head>
+<body>
+
+<p>&nbsp;</p>
+
+<h1><center>Welcome to PyFin.</center></h1>
+
+<p>&nbsp;</p>
+
+<center>
+<table width="600px" border="1">
+    <tr height="200px" align="center">
+        <td width="33%" bgcolor="#d3d3d3"><i>App 1</i></td>
+        <td width="33%" bgcolor="#d3d3d3"><i>App 2</i></td>
+        <td width="33%" bgcolor="#d3d3d3"><i>App 3</i></td>
+    </tr>
+    <tr height="200px" align="center">
+        <td width="33%" bgcolor="#d3d3d3"><i>App 4</i></td>
+        <td width="33%" bgcolor="#d3d3d3"><i>App 5</i></td>
+        <td width="33%"><a href="{% url 'PyFin.monitor.views.home' %}">Monitor</a></td>
+    </tr>
+</table>
+</center>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+{% block footer %}
+    <p><center><small>&copy;Copyright 2011, 2012. All rights reserved.</small></center></p>
+{% endblock %}
+
+</body>
+</html>
